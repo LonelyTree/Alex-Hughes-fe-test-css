@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Alex-Hughes-fe-test-css/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/Alex-Hughes-fe-test-css/static/js/main.8d28a314.chunk.js",
+    "main.js.map": "/Alex-Hughes-fe-test-css/static/js/main.8d28a314.chunk.js.map",
+    "runtime-main.js": "/Alex-Hughes-fe-test-css/static/js/runtime-main.3b715c10.js",
+    "runtime-main.js.map": "/Alex-Hughes-fe-test-css/static/js/runtime-main.3b715c10.js.map",
+    "static/js/2.937b9098.chunk.js": "/Alex-Hughes-fe-test-css/static/js/2.937b9098.chunk.js",
+    "static/js/2.937b9098.chunk.js.map": "/Alex-Hughes-fe-test-css/static/js/2.937b9098.chunk.js.map",
+    "index.html": "/Alex-Hughes-fe-test-css/index.html",
+    "precache-manifest.aaa2e173251247de1705921842cfda5d.js": "/Alex-Hughes-fe-test-css/precache-manifest.aaa2e173251247de1705921842cfda5d.js",
+    "service-worker.js": "/Alex-Hughes-fe-test-css/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/Alex-Hughes-fe-test-css/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.937b9098.chunk.js.LICENSE.txt": "/Alex-Hughes-fe-test-css/static/js/2.937b9098.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b715c10.js",
+    "static/js/2.937b9098.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.8d28a314.chunk.js"
+  ]
+}

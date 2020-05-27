@@ -1,78 +1,44 @@
 /** @jsx jsx */
-import React from 'react';
-import { css, jsx } from '@emotion/core';
-import cn from 'classnames';
-import Typography from '@material-ui/core/Typography';
-import { useTheme } from '@material-ui/core/styles';
-import { Credit } from '../App';
-import { COLORS } from '../colors';
+import React from 'react'
+import { jsx } from '@emotion/core'
+import cn from 'classnames'
+import { Grid } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography'
+import { useStyles } from './styles/styledPersonCredit'
+import { Credit } from '../App'
 
 type Props = {
-  className?: string;
-  creditData: Credit;
+	className?: string
+	creditData: Credit
 }
 
-const PersonCredit: React.FC<Props> = props => {
-  const { className = '', creditData } = props;
-  const theme = useTheme();
+const PersonCredit: React.FC<Props> = (props) => {
+	const { creditData } = props
+	const classes = useStyles()
 
+	return (
+		<Grid className={cn(classes.personCredit)}>
+			<Grid className={classes.creditLeft}>
+				<Typography
+					className={cn(classes.creditTop, classes.topLeft)}
+					variant='body1'
+				>
+					{creditData.position}
+				</Typography>
+				<Typography className={classes.creditBottomLeft} variant='body1'>
+					{creditData.productionType}
+				</Typography>
+			</Grid>
+			<Grid className={classes.creditRight}>
+				<Typography className={classes.topRight} variant='body1'>
+					{creditData.productionTitle}
+				</Typography>
+				<Typography className={classes.creditBottomRight} variant='body1'>
+					{creditData.year}
+				</Typography>
+			</Grid>
+		</Grid>
+	)
+}
 
-  const style = css`
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-
-    .credit-top {
-      margin: ${theme.spacing(1)}px 0;
-
-      &-left {
-        font-weight: 800;
-      }
-
-      &-right {
-        font-weight: normal;
-        text-align: right;
-      }
-    }
-
-    .credit-bottom {
-
-      &-left {
-        font-weight: 400;
-        color: gray;
-      }
-
-      &-right {
-        text-align: right;
-      }
-    }
-
-    &:not(:last-of-type) {
-      border-bottom: 1px solid ${COLORS.BORDER_COLOR};
-    }
-
-  `;
-
-  return (
-    <div className={cn(className, 'PersonCredit')} css={style}>
-      <div className="PersonCredit-left">
-        <Typography className="credit-top credit-top-left" variant="body1">
-          {creditData.position}
-        </Typography>
-        <Typography className="credit-bottom credit-bottom-left" variant="body1">
-          {creditData.productionType}
-        </Typography>
-      </div>
-      <div className="PersonCredit-right">
-        <Typography className="credit-top credit-top-right" variant="body1">
-          {creditData.productionTitle}
-        </Typography>
-        <Typography className="credit-bottom credit-bottom-right" variant="body1">
-          {creditData.year}
-        </Typography>
-      </div>
-    </div>
-  );
-};
-
-export default PersonCredit;
+export default PersonCredit

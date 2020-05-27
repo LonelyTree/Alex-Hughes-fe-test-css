@@ -1,7 +1,8 @@
 {
 	"name": "fe-testing",
-	"version": "0.1.0",
-	"private": true,
+	"version": "0.2.0",
+	"private": false,
+	"homepage": "https://lonelytree.github.io/Alex-Hughes-fe-test-css/",
 	"dependencies": {
 		"@emotion/core": "^10.0.27",
 		"@material-ui/core": "^4.9.0",
@@ -20,6 +21,8 @@
 		"typescript": "3.9.3"
 	},
 	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
@@ -41,6 +44,7 @@
 		]
 	},
 	"devDependencies": {
-		"@types/classnames": "^2.2.10"
+		"@types/classnames": "^2.2.10",
+		"gh-pages": "^2.2.0"
 	}
 }
